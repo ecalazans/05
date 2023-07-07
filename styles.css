@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*metdida da caixa como a borda da caixa*/
+  -webkit-font-smoothing: antialiased; /*fontes mais elegantes*/
+  -moz-osx-font-smoothing: grayscale; /*fontes mais elegantes*/
+}
+
+body {
+  height: 100vh; /*ocupando 100% da tela visível*/
+  width: 100vw; /*ocupando 100% da tela visível*/
+  background: linear-gradient(
+    180deg,
+    #807ece 0%,
+    #8e7ece 100%
+  ); /*função que cria uma imagem*/
+
+  display: grid;
+  place-content: center; /*Mover o calculatpor para o centro da tela*/
+}
+
+#calculator {
+  width: 356px;
+  height: 566px;
+
+  border-radius: 48px;
+  background: #2d2a37;
+  box-shadow: 
+    0px -4px 5px 0px rgba(0, 0, 0, 0.22) inset,
+    0px 6px 8px 0px rgba(255, 255, 255, 0.1) inset,
+    0px 8px 17px 0px rgba(0, 0, 0, 0.29),
+    0px 30px 30px 0px rgba(0, 0, 0, 0.26),
+    0px 68px 41px 0px rgba(0, 0, 0, 0.15),
+    0px 120px 48px 0px rgba(0, 0, 0, 0.04),
+    0px 188px 52px 0px rgba(0, 0, 0, 0.01),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.25); /* x, y, spread (color)*/
+}
+
+#display {
+    margin-top: 54px;
+    padding-inline: 54px; /*colocando espaçamento por igual, de um lado e do outro*/
+
+}
+
+#last-calc {
+    text-align: right;
+}
+
+#result {
+    display: flex;
+    justify-content: space-between;/*com display flex é habilitado o justify*/
+}
