@@ -13,10 +13,15 @@ body {
     180deg,
     #807ece 0%,
     #8e7ece 100%
-  ); /*função que cria uma imagem*/
+  ); /*função que cria uma cor do "tipo" "imagem"*/
 
   display: grid;
   place-content: center; /*Mover o calculatpor para o centro da tela*/
+}
+
+body * {
+  font-family: "Rubik";
+  letter-spacing: -0.02em;
 }
 
 #calculator {
@@ -25,28 +30,108 @@ body {
 
   border-radius: 48px;
   background: #2d2a37;
-  box-shadow: 
-    0px -4px 5px 0px rgba(0, 0, 0, 0.22) inset,
+  box-shadow: 0px -4px 5px 0px rgba(0, 0, 0, 0.22) inset,
     0px 6px 8px 0px rgba(255, 255, 255, 0.1) inset,
-    0px 8px 17px 0px rgba(0, 0, 0, 0.29),
-    0px 30px 30px 0px rgba(0, 0, 0, 0.26),
+    0px 8px 17px 0px rgba(0, 0, 0, 0.29), 0px 30px 30px 0px rgba(0, 0, 0, 0.26),
     0px 68px 41px 0px rgba(0, 0, 0, 0.15),
     0px 120px 48px 0px rgba(0, 0, 0, 0.04),
-    0px 188px 52px 0px rgba(0, 0, 0, 0.01),
-    0px 4px 4px 0px rgba(0, 0, 0, 0.25); /* x, y, spread (color)*/
+    0px 188px 52px 0px rgba(0, 0, 0, 0.01), 0px 4px 4px 0px rgba(0, 0, 0, 0.25); /* x, y, spread (color)*/
 }
 
 #display {
-    margin-top: 54px;
-    padding-inline: 54px; /*colocando espaçamento por igual, de um lado e do outro*/
-
+  margin-top: 54px;
+  padding-inline: 54px; /*colocando espaçamento por igual, de um lado e do outro*/
 }
 
 #last-calc {
-    text-align: right;
+  text-align: right;
+  font-size: 20px;
+  line-height: 140%;
+
+  color: #6b6b6b;
 }
 
 #result {
-    display: flex;
-    justify-content: space-between;/*com display flex é habilitado o justify*/
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between; /*com display flex é habilitado o justify*/
+}
+
+#result span {
+  font-size: 36px;
+  line-height: 140%;
+  color: #ebebeb;
+}
+
+#keyboard {
+  margin-top: 26px;
+  margin-inline: 32px; /*colocando espaçamento por igual, de um lado e do outro*/
+
+  display: grid; /*criando a grid para estruturar os espaços dos buttons*/
+  grid-template-columns: repeat(
+    4,
+    1fr
+  ); /*esctrutura será em 4colunas e 1fr quer dizer separa automaticamente em uma fração*/
+  gap: 12px; /*espaço de 12px entre os elementos*/
+}
+
+button {
+  border: none; /*Tirando as bordas do botão*/
+
+  width: 64px;
+  height: 64px;
+
+  font-size: 24px;
+  letter-spacing: -0.48px;
+
+  color: #ebebeb;
+
+  border-radius: 999px;
+
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.05) 0%,
+      rgba(255, 255, 255, 0.05) 100%
+    ),
+    #2d2a37;
+  box-shadow: 0px 2px 3px 0px rgba(255, 255, 255, 0.06) inset,
+    0px 0px 2px 0px rgba(0, 0, 0, 0.29), 0px 2px 4px 0px rgba(0, 0, 0, 0.26),
+    0px 4px 6px 0px rgba(0, 0, 0, 0.1), 0px 7px 7px 0px rgba(0, 0, 0, 0.04),
+    0px 11px 7px 0px rgba(0, 0, 0, 0.01);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.secondary {
+  color: #975dfa;
+}
+
+.tertiary {
+  border-radius: 999px;
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.05) 0.01%,
+      rgba(255, 255, 255, 0.05) 100%
+    ),
+    #462878;
+  box-shadow: 0px 2px 3px 0px rgba(255, 255, 255, 0.1) inset,
+    0px 0px 2px 0px rgba(0, 0, 0, 0.29), 0px 2px 4px 0px rgba(0, 0, 0, 0.26),
+    0px 4px 6px 0px rgba(0, 0, 0, 0.1), 0px 7px 7px 0px rgba(0, 0, 0, 0.04),
+    0px 11px 7px 0px rgba(0, 0, 0, 0.01);
+}
+
+.quartiary {
+  border-radius: 999px;
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.15) 0%,
+      rgba(255, 255, 255, 0.05) 100%
+    ),
+    #7f45e2;
+  box-shadow: 0px 2px 3px 0px rgba(255, 255, 255, 0.1) inset,
+    0px 0px 2px 0px rgba(0, 0, 0, 0.29), 0px 2px 4px 0px rgba(0, 0, 0, 0.26),
+    0px 4px 6px 0px rgba(0, 0, 0, 0.1), 0px 7px 7px 0px rgba(0, 0, 0, 0.04),
+    0px 11px 7px 0px rgba(0, 0, 0, 0.01);
 }
